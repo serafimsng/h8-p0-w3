@@ -1,15 +1,13 @@
 
 
 function pasanganTerbesar(num) {
-	var x = String(num).split('')
-	var y=''
-	for(var i = 0; i <= x.length-2; i++){
-		y = y+x[i]+x[i+1]+","
-	}
-	var q = y.split(',')
-	var sorted = q.sort(function(x,y){ return y-x})[0]
-	return sorted
-	
+  var str = String(num).split('')
+  var pair =''
+  for(var i=0; i<str.length-1;i++){
+  	pair = str[i]+str[i+1]+','+pair
+  }
+  var sorted = pair.split(',').sort(function(a,b){return b-a})
+  return sorted[0];
 }
 
 // TEST CASES

@@ -1,29 +1,15 @@
 
+function dataHandling(arg){
+	for(var i=0; i<arg.length;i++){
+		var id=arg[i][0]
+		var nama=arg[i][1]
+		var kota=arg[i][2]
+		var tl=arg[i][3]
+		var hobi=arg[i][4]
 
-function dataHandling(arr) {
-	var data ='';
-	for(var i = 0; i < arr.length; i++){
-		for(var j = 0; j < arr[i].length; j++){
-			switch(j){
-				case 0:
-					data = data + 'Nomor: ' + arr[i][j] + '\n'
-					break;
-				case 1:
-					data = data + 'Nama: ' + arr[i][j] + '\n'
-					break;
-				case 2:
-					data = data + 'Alamat: ' + arr[i][j] + '\n'
-					break;
-				case 3:
-					data = data + 'Tanggal Lahir: ' + arr[i][j] + '\n'
-					break;
-				case 4:
-					data = data + 'Hobby: ' + arr[i][j] + '\n\n'
-					break;
-			}
-		}
+		var listIdentitas =  listIdentitas+`Nomor ID: ${id} \nNama Lengkap: ${nama} \nTTL: ${kota} ${tl} \nHobi: ${hobi} \n\n`
 	}
-	return data
+return listIdentitas	
 }
 
 var input = [

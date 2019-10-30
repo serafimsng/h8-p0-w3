@@ -7,3 +7,4 @@ var kebalik='';
 	return kebalik
 }
 console.log(balikKata('hello world'));
+console.log(balikKata('Siapa yang jadi presiden setelah Jokowi??'));

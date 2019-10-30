@@ -1,26 +1,18 @@
 function tentukanDeretGeometri(arr) {
-	var q = selisih(arr).split(',')
-	
-  for(var i = 0; i <= q.length-1; i++ ){
-  	if(q[i] === q[i+1]){
-  		return true
-  	}else{
-  		return false
-  	}
-  }
-}
 
-function selisih(arr) {
-	var x = 0
-	var y= []
-	for(var i = 0; i < arr.length-1; i++){
-		x = arr[i+1]/arr[i] + ','+ x
+var beda=[]
+	for(var i=arr.length-1; i > 0 ;i--){
+		beda.push(arr[i]/arr[i-1])
 	}
-		
-	return x
+	for(var j=0; j<beda.length;j++){
+		if(beda[i]===beda[i+1]){
+			return true
+		}else{
+			return false
+		}
+	}
 }
 
-// console.log(selisih([1, 3, 9, 27, 81]))
 // TEST CASES
 console.log(tentukanDeretGeometri([1, 3, 9, 27, 81])); // true
 console.log(tentukanDeretGeometri([2, 4, 8, 16, 32])); // true

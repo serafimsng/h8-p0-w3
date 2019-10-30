@@ -1,24 +1,17 @@
 function tentukanDeretAritmatika(arr) {
-	var q = selisih(arr)
-  for(var i = 0;i <= q.length-1; i++){
-  	if(q[i] === q[i+1]){
-  		return true
-  	}else{
-  		return false
-  	}
+var selisih = []
+  for(var i=arr.length-1;i>0;i--){
+    selisih.push(arr[i]-arr[i-1])
+  }
+ 
+  for(var j=0; j < selisih.length; j++){
+    if(selisih[i]===selisih[i+1]){
+      return true
+    }else{
+      return false
+    }
   }
 }
-
-function selisih(arr){
-var newarr=[]
-var x = 0
-	for(var i = 0; i < arr.length-1; i++){
-		x = arr[i+1]-arr[i] + ',' +x
-	}
-	 var y = x.split(',')
-	 return y
-}
-// console.log(selisih([1, 2, 3, 4, 5, 6]))
 
 // TEST CASES
 console.log(tentukanDeretAritmatika([1, 2, 3, 4, 5, 6])); // true

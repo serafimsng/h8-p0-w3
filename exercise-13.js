@@ -15,18 +15,16 @@ function targetTerdekat(arr) {
   		listX.push(i)
   	}
   }
-  var selisih=0
-  var arrselisih=[]
+  var arrSelisih=[]
   for(var j=0;j<listO.length;j++){
   	for(var k=0; k<listX.length;k++){
-  		selisih=listO[j]-listX[k]
-  		arrselisih.push(Math.abs(selisih))
+  		arrSelisih.push(Math.abs(listO[j]-listX[k]))
   	}
   }
-  if(arrselisih.length == 0){
+  if(arrSelisih.length == 0){
   	return 0
   }
-  var terkecil = arrselisih.sort()
+  var terkecil = arrSelisih.sort()
 
   return terkecil[0];
 
