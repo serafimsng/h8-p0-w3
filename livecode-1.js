@@ -25,5 +25,5 @@ ELSE IF suhu is LESS or EQUAL to 28
 ELSE IF suhu is LESS or EQUAL to 30 
 	THEN DISPLAY "maka menggunakan kipas angin"
 ELSE
-	THEN DISPLAY "Tidak menggunakan kipas atau AC"
+	THEN DISPLAY "menggunakan AC"
 END IF
